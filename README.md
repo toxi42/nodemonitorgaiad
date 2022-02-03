@@ -15,6 +15,9 @@ screen -S nodemonitor -X quit #for stop
 crontab -e
 @reboot sleep 15; rm -f /tmp/nodemonitor-root*
 @reboot sleep 60; screen -d -m -S nodemonitor /tmp/nodemonitor.sh
+install template to ur zabbix server
+use only active zabbix-agent!
+change HOST macros to ur location log /tmp/nodemonitor-root.log 
 ```
   
   ### Concept
