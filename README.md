@@ -3,7 +3,21 @@ This project is intended pre-Stargate, a new Stargate version with many enhancem
 # nodemonitorgaiad
 A complete log file based Cosmos gaiad monitoring solution for Zabbix. It consists of the shell script nodemonitor.sh for generating log files on the host and the template zbx_<n>_template_nodemonitorgaiad.xml for the Zabbix server, either version 4.x or 5.x.
 
-### Concept
+### quick start
+
+```sh
+apt install -y screen
+cd /tmp
+wget https://raw.githubusercontent.com/toxi42/nodemonitorgaiad/master/nodemonitor.sh
+rm -f /tmp/nodemonitor-root*
+screen -d -m -S nodemonitor /tmp/nodemonitor.sh
+screen -S nodemonitor -X quit #for stop
+crontab -e
+@reboot sleep 15; rm -f /tmp/nodemonitor-root*
+@reboot sleep 60; screen -d -m -S nodemonitor /tmp/nodemonitor.sh
+```
+  
+  ### Concept
 
 nodemonitor.sh generates logs that look like:
 
