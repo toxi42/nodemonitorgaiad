@@ -9,6 +9,7 @@ A complete log file based Cosmos gaiad monitoring solution for Zabbix. It consis
 apt install -y screen
 cd /tmp
 wget https://raw.githubusercontent.com/toxi42/nodemonitorgaiad/master/nodemonitor.sh
+chmod +x /tmp/nodemonitor.sh
 rm -f /tmp/nodemonitor-root*
 screen -d -m -S nodemonitor /tmp/nodemonitor.sh
 screen -S nodemonitor -X quit #for stop
