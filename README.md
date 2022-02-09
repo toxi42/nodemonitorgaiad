@@ -7,18 +7,17 @@ A complete log file based Cosmos gaiad monitoring solution for Zabbix. It consis
 
 ```sh
 apt install -y screen
-cd /tmp
-wget https://raw.githubusercontent.com/toxi42/nodemonitorgaiad/master/nodemonitor.sh
-chmod +x /tmp/nodemonitor.sh
-rm -f /tmp/nodemonitor-root*
-screen -d -m -S nodemonitor /tmp/nodemonitor.sh
+wget -qO /home/nodemonitor.sh https://raw.githubusercontent.com/toxi42/nodemonitorgaiad/master/nodemonitor.sh
+chmod +x /home/nodemonitor.sh
+rm -f /home/nodemonitor-root*
+screen -d -m -S nodemonitor /home/nodemonitor.sh
 screen -S nodemonitor -X quit #for stop
 crontab -e
-@reboot sleep 15; rm -f /tmp/nodemonitor-root*
-@reboot sleep 60; screen -d -m -S nodemonitor /tmp/nodemonitor.sh
+@reboot sleep 15; rm -f /home/nodemonitor-root*
+@reboot sleep 60; screen -d -m -S nodemonitor /home/nodemonitor.sh
 install template to ur zabbix server
 use only active zabbix-agent!
-change HOST macros to ur location log /tmp/nodemonitor-root.log 
+change HOST macros to ur location log /home/nodemonitor-root.log 
 ```
   
   ### Concept
