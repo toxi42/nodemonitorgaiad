@@ -7,7 +7,7 @@
 ###    if suppressing error messages is preferred, run as './nodemonitor.sh 2> /dev/null'
 
 ###    CONFIG    ##################################################################################################
-CONFIG=""                # config.toml file for node, eg. $HOME/.gaia/config/config.toml
+CONFIG="$HOME/.NODEDIR/config/config.toml"                # config.toml file for node, eg. $HOME/.gaia/config/config.toml
 ### optional:            #
 NPRECOMMITS="20"         # check last n precommits, can be 0 for no checking
 VALIDATORADDRESS=""      # if left empty default is from status call (validator)
