@@ -17,7 +17,7 @@ change HOST macros to ur location log /home/nodemonitor-root.log
 
 ```sh
 apt install -y screen
-wget -qO /home/nodemonitor.sh https://raw.githubusercontent.com/toxi42/nodemonitorgaiad/master/nodemonitor.sh
+wget -qO /home/nodemonitor.sh https://raw.githubusercontent.com/starnodes/nodemonitorgaiad/master/nodemonitor.sh
 chmod +x /home/nodemonitor.sh
 rm -f /home/nodemonitor-root*
 screen -d -m -S nodemonitor /home/nodemonitor.sh
