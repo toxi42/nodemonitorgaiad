@@ -23,7 +23,7 @@ rm -f /home/nodemonitor-root*
 screen -d -m -S nodemonitor /home/nodemonitor.sh
 screen -S nodemonitor -X quit #for stop
 crontab -e
-@reboot sleep 15; rm -f /home/nodemonitor-root*
+@reboot sleep 15; rm -f /home/nodemonitor-*
 @reboot sleep 60; screen -d -m -S nodemonitor /home/nodemonitor.sh 
 ```
   
